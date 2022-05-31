@@ -4,7 +4,7 @@ import {
   InscrevaSection,
   TextoInscreva,
   TituloInscreva,
-} from "./InscrevaStyle";
+} from "./InscrevaStyles";
 import backgroundImg from "../../assents/Background-inscreva-se.jpeg";
 
 const Inscreva = () => {
