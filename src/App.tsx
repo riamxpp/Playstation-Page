@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Aviso from "./Components/Aviso/Aviso";
 import Haeder from "./Components/Header/Header";
 import Historia from "./Components/Historia/Historia";
 import Inovacao from "./Components/Inovacao/Inovacao";
@@ -12,6 +13,7 @@ function App() {
       <Inscreva />
       <Historia />
       <Inovacao />
+      <Aviso />
     </>
   );
 }
