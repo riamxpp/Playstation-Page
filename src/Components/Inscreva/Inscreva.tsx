@@ -5,7 +5,7 @@ import {
   TextoInscreva,
   TituloInscreva,
 } from "./InscrevaStyles";
-import backgroundImg from "../../assents/Background-inscreva-se.jpeg";
+import backgroundImg from "../../assents/Background.jpeg";
 
 const Inscreva = () => {
   return (
