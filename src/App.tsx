@@ -8,6 +8,7 @@ import Haeder from "./Components/Header/Header";
 import Historia from "./Components/Historia/Historia";
 import Inovacao from "./Components/Inovacao/Inovacao";
 import Inscreva from "./Components/Inscreva/Inscreva";
+import SlideJogos from "./Components/SlideJogos/SlideJogos";
 import VrPictures from "./Components/VrPictures/VrPictures";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Haeder />
       <Inscreva />
       <Historia />
+      <SlideJogos />
       <Inovacao />
       <Aviso />
       <Gadget />
