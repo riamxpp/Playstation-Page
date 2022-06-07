@@ -14,6 +14,15 @@ const ContainerPrincipalGadget = styled.div`
   width: 1140px;
   display: flex;
   margin: 0 auto;
+  @media (max-width: 1200px) {
+    width: 940px;
+  }
+  @media (max-width: 975px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ContainerGadget = styled.div`
@@ -21,6 +30,12 @@ const ContainerGadget = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  @media (max-width: 1200px) {
+    width: 532px;
+  }
+  @media (max-width: 975px) {
+    width: 85%;
+  }
 `;
 
 const SeguraConteudoGadget = styled.div`
@@ -53,6 +68,9 @@ const TextoGadget = styled.p`
 const SeguraMiniContainers = styled.div`
   height: 45%;
   display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 const MiniContainerGadget = styled.article<MiniContainerGadgetInterface>`
@@ -65,6 +83,12 @@ const MiniContainerGadget = styled.article<MiniContainerGadgetInterface>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  @media (max-width: 975px) {
+    height: 200px;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 const TituloMiniContainer = styled.h5`
@@ -80,6 +104,13 @@ const ContainerImagem = styled.div<ContainerImagemInterface>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: -300px;
+  @media (max-width: 1200px) {
+    width: 407px;
+  }
+  @media (max-width: 975px) {
+    width: 85%;
+    background-position-x: initial;
+  }
 `;
 
 export {
