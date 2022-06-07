@@ -33,7 +33,6 @@ const SlideJogos = () => {
   function nextSlide() {
     if (slidePage !== TOTAL_SLIDES) {
       setSlidePage((prev) => (prev += 1));
-
       if (ContainerContentRef.current?.offsetWidth)
         setWidthContent(-ContainerContentRef.current?.offsetWidth);
     }
