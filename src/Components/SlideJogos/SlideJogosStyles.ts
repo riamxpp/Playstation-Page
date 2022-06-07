@@ -8,7 +8,7 @@ import {
 const SlideJogosComponente = styled.section`
   width: 100%;
   height: auto;
-  padding: 2rem 0;
+  padding: 4rem 0;
   background: ${colors.textSecond};
 `;
 
@@ -19,6 +19,16 @@ const WrapperSlide = styled.div`
   overflow: hidden;
   background: ${colors.textSecond};
   position: relative;
+  padding: 0;
+  @media (max-width: 1200px) {
+    width: 900px;
+  }
+  @media (max-width: 900px) {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
 `;
 
 const MoveSlide = styled.div`
@@ -35,6 +45,14 @@ const ContainerContent = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: space-evenly;
+  @media (max-width: 1200px) {
+    width: 900px;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+  }
 `;
 
 const ContainerTexto = styled.div`
@@ -47,6 +65,10 @@ const ContainerTexto = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  @media (max-width: 900px) {
+    width: 70%;
+    padding: 0 2rem;
+  }
 `;
 const TituloSlide = styled.h3`
   text-transform: uppercase;
@@ -72,15 +94,29 @@ const ContainerFoto = styled.div<ContainerFotoInterface>`
   width: 45%;
   height: 75%;
   border-radius: 30px;
+  @media (max-width: 900px) {
+    width: 70%;
+    height: 30rem;
+  }
 `;
 
-const ContainerButton = styled.div`
+const WrapperButton = styled.div`
   width: 1140px;
   height: auto;
   position: absolute;
+  top: 50%;
+  z-index: 1;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`;
+
+const ContainerButton = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: space-between;
-  top: 50%;
 `;
 
 const ButtonPrev = styled.button`
@@ -100,12 +136,16 @@ const ButtonNext = styled.button`
 `;
 
 const WrapperCurrentSlide = styled.div`
-  width: 1140px;
+  width: 100%;
   height: auto;
   position: absolute;
   display: flex;
   justify-content: center;
   top: 90%;
+  z-index: 1;
+  @media (max-width: 900px) {
+    top: 95%;
+  }
 `;
 
 const ContainerCurrentSlide = styled.div`
@@ -135,6 +175,7 @@ export {
   TituloSlide,
   TextoSlide,
   ContainerFoto,
+  WrapperButton,
   ContainerButton,
   ButtonPrev,
   ButtonNext,

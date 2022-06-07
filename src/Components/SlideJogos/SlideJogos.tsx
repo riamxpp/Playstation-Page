@@ -14,11 +14,13 @@ import {
   WrapperCurrentSlide,
   ContainerCurrentSlide,
   CurrentSlide,
+  WrapperButton,
 } from "./SlideJogosStyles";
 import Slide1 from "../../assents/Mulher-vr.jpeg";
 import Slide2 from "../../assents/homem-vr-1.jpeg";
 import Prev from "./Prev";
 import Next from "./Next";
+import useDebounce from "../../hooks/useDebounce";
 
 const TOTAL_SLIDES = 2;
 const INITIAL_SLIDES = 1;
@@ -27,8 +29,13 @@ const SlideJogos = () => {
   const [slidePage, setSlidePage] = useState<number>(INITIAL_SLIDES);
   const ContainerContentRef = useRef<HTMLDivElement>(null);
   const MoveSlideRef = useRef<HTMLDivElement>(null);
+  const debounceValue = useDebounce(widthContent, 500);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      resetSlide();
+    });
+  }, [debounceValue]);
 
   function nextSlide() {
     if (slidePage !== TOTAL_SLIDES) {
@@ -45,17 +52,25 @@ const SlideJogos = () => {
     }
   }
 
+  function resetSlide() {
+    setSlidePage(INITIAL_SLIDES);
+    setWidthContent(0);
+  }
+
   return (
     <SlideJogosComponente>
       <WrapperSlide>
-        <ContainerButton>
-          <ButtonPrev onClick={prevSlide}>
-            <Prev></Prev>
-          </ButtonPrev>
-          <ButtonNext onClick={nextSlide}>
-            <Next></Next>
-          </ButtonNext>
-        </ContainerButton>
+        <WrapperButton>
+          <ContainerButton>
+            <ButtonPrev onClick={prevSlide}>
+              <Prev></Prev>
+            </ButtonPrev>
+            <ButtonNext onClick={nextSlide}>
+              <Next></Next>
+            </ButtonNext>
+          </ContainerButton>
+        </WrapperButton>
+
         <WrapperCurrentSlide>
           <ContainerCurrentSlide>
             <CurrentSlide
