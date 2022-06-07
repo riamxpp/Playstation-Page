@@ -15,12 +15,37 @@ const InovacaoComponent = styled.section<InovacaoComponentInterface>`
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  @media (max-width: 1200px) {
+    background-size: 120%;
+  }
+  @media (max-width: 950px) {
+    background-size: 150%;
+  }
+  @media (max-width: 850px) {
+    background-size: 250%;
+  }
+  @media (max-width: 500px) {
+    background-size: 450%;
+  }
 `;
 
 const InovacaoContainer = styled.div`
   width: 1104px;
   height: auto;
   display: flex;
+  @media (max-width: 1100px) {
+    width: 900px;
+  }
+  @media (max-width: 950px) {
+    width: 800px;
+  }
+  @media (max-width: 850px) {
+    width: 90%;
+  }
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const InovacaoControleContainer = styled.article<InovacaoControleContainerInterface>`
@@ -30,6 +55,13 @@ const InovacaoControleContainer = styled.article<InovacaoControleContainerInterf
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -300px -50px;
+  @media (max-width: 1100px) {
+    width: 470px;
+  }
+  @media (max-width: 850px) {
+    width: 60%;
+    height: 350px;
+  }
 `;
 
 const TituloInovacaoControler = styled.h2`
@@ -48,6 +80,18 @@ const InovacaoProgramasContainer = styled.article`
   display: flex;
   align-items: flex-end;
   justify-content: right;
+  @media (max-width: 1100px) {
+    width: 400px;
+  }
+  @media (max-width: 850px) {
+    width: 40%;
+    height: 350px;
+  }
+  @media (max-width: 650px) {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const InovacaoTexto = styled.p`
@@ -59,6 +103,9 @@ const InovacaoTexto = styled.p`
   text-transform: uppercase;
   margin-bottom: 35px;
   text-align: right;
+  @media (max-width: 650px) {
+    text-align: center;
+  }
 `;
 
 export {
