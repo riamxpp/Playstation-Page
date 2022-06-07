@@ -13,6 +13,12 @@ const HistoriaComponent = styled.section`
 
 const ContainerNossaHistoria = styled.div`
   width: 990px;
+  @media (max-width: 1050px) {
+    width: 720px;
+  }
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 const TituloPrincipalHistoria = styled.h2`
@@ -32,6 +38,15 @@ const ContainerSubTitulo = styled.div`
   display: flex;
   width: 1000px;
   margin-top: 20px;
+  @media (max-width: 1050px) {
+    width: 730px;
+  }
+  @media (max-width: 800px) {
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ContainerMissao = styled.article`
@@ -40,6 +55,9 @@ const ContainerMissao = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const ContainerVisao = styled.article`
@@ -49,6 +67,9 @@ const ContainerVisao = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const TituloSecundarioHistoria = styled.h3`
@@ -66,6 +87,12 @@ const SubTextoCard = styled.p`
   line-height: 1.6;
   word-wrap: break-word;
   width: 400px;
+  @media (max-width: 1050px) {
+    width: 95%;
+  }
+  @media (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 export {
