@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { colors } from "../../colors";
-import { ContainerFotoInterface } from "./SlideJogosInterface";
+import {
+  ContainerFotoInterface,
+  CurrentSlideInterface,
+} from "./SlideJogosInterface";
 
 const SlideJogosComponente = styled.section`
   width: 100%;
@@ -19,11 +22,11 @@ const WrapperSlide = styled.div`
 `;
 
 const MoveSlide = styled.div`
-  width: auto;
   height: 100%;
   background: blue;
   display: flex;
   background: ${colors.textSecond};
+  transition: 0.5s ease-in-out;
 `;
 
 const ContainerContent = styled.div`
@@ -65,6 +68,7 @@ const ContainerFoto = styled.div<ContainerFotoInterface>`
   background-image: url(${(props) => props.backgroundImg});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: ${(props) => props.positionImg};
   width: 45%;
   height: 75%;
   border-radius: 30px;
@@ -84,12 +88,41 @@ const ButtonPrev = styled.button`
   color: #446bdd;
   border: none;
   cursor: pointer;
+  z-index: 1;
 `;
 
 const ButtonNext = styled.button`
   background: transparent;
   color: #446bdd;
   border: none;
+  cursor: pointer;
+  z-index: 1;
+`;
+
+const WrapperCurrentSlide = styled.div`
+  width: 1140px;
+  height: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 90%;
+`;
+
+const ContainerCurrentSlide = styled.div`
+  width: 3rem;
+  height: auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const CurrentSlide = styled.div<CurrentSlideInterface>`
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : "#c7d0ec"};
+  z-index: 1;
   cursor: pointer;
 `;
 
@@ -105,4 +138,7 @@ export {
   ContainerButton,
   ButtonPrev,
   ButtonNext,
+  WrapperCurrentSlide,
+  ContainerCurrentSlide,
+  CurrentSlide,
 };
