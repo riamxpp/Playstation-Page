@@ -18,6 +18,10 @@ const TituloBaixeJogos = styled.h2`
   width: 576px;
   font-size: 2.25rem;
   margin: 0 auto;
+  @media (max-width: 750px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 export { BaixeJogosComponent, TituloBaixeJogos };

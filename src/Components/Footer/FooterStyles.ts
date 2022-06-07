@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../colors";
 
-const FooterComponent = styled.section`
+const FooterComponent = styled.footer`
   width: 100%;
   height: auto;
   padding: 3rem 0;

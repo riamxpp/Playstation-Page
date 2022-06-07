@@ -13,6 +13,9 @@ const ContainerAviso = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const AvisoPrincipalTitulo = styled.h2`
@@ -20,6 +23,9 @@ const AvisoPrincipalTitulo = styled.h2`
   width: 30rem;
   font-weight: 700;
   font-size: 2.25rem;
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 const AvisoSecundarioTitulo = styled.h5`
@@ -31,6 +37,9 @@ const AvisoSecundarioTitulo = styled.h5`
   text-align: right;
   margin-top: 65px;
   font-weight: 400;
+  @media (max-width: 800px) {
+    align-self: flex-end;
+  }
 `;
 
 export {
